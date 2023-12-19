@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+   background-color: hsl(217, 54%, 11%); 
+   font-family: 'Outfit', sans-serif;
+    color: hsl(215, 51%, 70%);
+   display: flex ;
+   flex-direction: column;
+   justify-content: center ;
+   align-items: center;
+   min-height: 100vh;
+}
+
+.container{
+    max-width: 30rem;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 9px;
+}
+
+.nft-component{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto;
+    row-gap: 1.6rem;
+    padding: 1.2rem;
+}
+
+.nft-img-box img{
+    width: 100%;
+    border-radius: 9px;
+}
+
+.nft-title{
+    font-size: 2rem;
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.nft-text{
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+
+.price-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price-box p{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.price span, .time span{
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.price span{
+    color: hsl(178, 100%, 50%);
+    font-weight: 600;
+}
+
+.author-box {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.6rem 0;
+    border-top: 1px solid hsl(215, 32%, 27%);
+}
+
+.author-box img{
+    height: 3.6rem;
+    width: 3.6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1.5px solid hsl(0, 0%, 100%);
+}
+
+.author-text{
+    font-size: 1.4rem;
+}
+
+.author-text span{
+    color: hsl(0, 0%, 100%);
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
