@@ -1,104 +1,149 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
 
-body{
-   background-color: hsl(217, 54%, 11%); 
-   font-family: 'Outfit', sans-serif;
-    color: hsl(215, 51%, 70%);
-   display: flex ;
-   flex-direction: column;
-   justify-content: center ;
-   align-items: center;
-   min-height: 100vh;
+body {
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+  color: hsl(215, 51%, 70%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.container{
-    max-width: 30rem;
-    background-color: hsl(216, 50%, 16%);
-    border-radius: 9px;
-    padding: 1.4rem;
-    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.1);
+.container {
+  max-width: 30rem;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 9px;
+  padding: 1.4rem;
+  box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.1);
 }
 
-.nft-component{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto auto;
-    row-gap: 1.6rem;
+.nft-component {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto auto;
+  row-gap: 1.6rem;
+  overflow: hidden;
 }
 
-.nft-img-box img{
+.nft-img-box{
+    position: relative;
+}
+
+.nft-img-box img {
+  max-width: 100%;
+  border-radius: 9px;
+  display: block;
+}
+
+.overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-color: hsl(178, 100%, 50%);
     border-radius: 9px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+
+  .nft-img-box:hover .overlay{
+    opacity: 0.4;
+  }
+
+  .nft-img-box:hover .icon{
+    opacity: 0.7;
+  }
+
+.nft-title {
+  font-size: 2rem;
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  margin-bottom: 2rem;
+  transition: all 0.3s;
 }
 
-.nft-title{
-    font-size: 2rem;
-    color: hsl(0, 0%, 100%);
-    font-weight: 600;
-    margin-bottom: 2rem;
+.nft-title:hover {
+  color: hsl(178, 100%, 50%);
 }
 
-.nft-text{
-    font-size: 1.6rem;
-    font-weight: 300;
-    margin-bottom: 2rem;
-    line-height: 1.4;
+.nft-text {
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  line-height: 1.4;
 }
 
-.price-box{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.price-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.price-box p{
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
+.price-box p {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
-.price span, .time span{
-    font-size: 1.4rem;
-    font-weight: 400;
+.price span,
+.time span {
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 
-.price span{
-    color: hsl(178, 100%, 50%);
-    font-weight: 600;
+.price span {
+  color: hsl(178, 100%, 50%);
+  font-weight: 600;
 }
 
 .author-box {
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-    padding: 1.6rem 0;
-    border-top: 1px solid hsl(215, 32%, 27%);
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.6rem 0;
+  border-top: 1px solid hsl(215, 32%, 27%);
 }
 
-.author-box img{
-    height: 3.6rem;
-    width: 3.6rem;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 1.5px solid hsl(0, 0%, 100%);
+.author-box img {
+  height: 3.6rem;
+  width: 3.6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1.5px solid hsl(0, 0%, 100%);
 }
 
-.author-text{
-    font-size: 1.4rem;
+.author-text {
+  font-size: 1.4rem;
 }
 
-.author-text span{
-    color: hsl(0, 0%, 100%);
+.author-text span {
+  color: hsl(0, 0%, 100%);
+  transition: all 0.3s;
 }
 
+.author-text span:hover {
+    color: hsl(178, 100%, 50%);
+  }
 
 .attribution {
   font-size: 11px;
@@ -108,4 +153,3 @@ body{
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-
