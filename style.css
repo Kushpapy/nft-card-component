@@ -86,6 +86,7 @@ body {
 
 .nft-title:hover {
   color: hsl(178, 100%, 50%);
+  cursor: pointer;
 }
 
 .nft-text {
@@ -145,6 +146,7 @@ body {
 
 .author-text span:hover {
     color: hsl(178, 100%, 50%);
+    cursor: pointer;
   }
 
 .attribution {
